@@ -2,4 +2,13 @@
 Workaround, welches Netzwerkmodul von FF-Routern bei Meshverlust neu startet.
 
 # Installation
-In z.B. /opt kopieren und dort regelmäßig mit cron aufrufen
+Skript in z.B. /opt/mesh_check.sh einfügen
+
+Skript mit ausführbau machen:
+chmod +x /opt/mesh_check.sh
+
+Cronjob anlegen:
+crontab -e
+
+Dort folgendes eingragen, damit Skript ein Mal pro Stunde ausgeführt wird:
+0 0 * * * /opt/mesh_check.sh
