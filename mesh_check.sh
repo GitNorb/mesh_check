@@ -10,7 +10,6 @@ IP="2a01:198:70a:ff::FFFE"
 #IP="2a01:198:70a:ff::100:1"
 
 DATE=$(date +%d.%m.%Y,%H:%M:%S)
-LOGOUTPUT="/tmp/mesh_check.log"
 
 echo "start ping to $IP"
 ping -c 10 "$IP" > /dev/null # 10x Ping
@@ -24,8 +23,8 @@ else
     # Nein.                   
     # Router hat Mesh verloren                
     echo "$IP offline"
-    echo "$DATE restart network">>"$LOGOUTPUT"
-    echo "restart network"                    
-    /etc/init.d/network restart
+    logger "wifi reset"
+    echo "restart wifi"                    
+    wifi
 fi
 exit 0
