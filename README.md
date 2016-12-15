@@ -22,7 +22,7 @@ Skript, welches mit Ping misst, ob es noch Verbindung zu anderen Nodes hat
 ## Installation
 Skript in z.B. /opt/mesh_check.sh einfügen
 
-Skript mit ausführbar machen:
+Skript ausführbar machen:
 ```
 chmod +x /opt/mesh_check.sh
 ```
